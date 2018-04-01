@@ -97,4 +97,7 @@ RUN pip install kernda --no-cache && \
     kernda -o -y /usr/local/share/jupyter/kernels/python2/kernel.json && \
     pip uninstall kernda -y
 
+# For interact
+RUN jupyter labextension install @jupyter-widgets/jupyterlab-manager
+
 USER $NB_USER
